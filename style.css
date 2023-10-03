@@ -1,0 +1,14 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.topbar a{
+    text-decoration:none;
+    padding-right: 3px;
+    padding-left: 3px;
+    font-size: xx-large;
+    color: white;
+}
+.topbar a:hover{
+    color: red;
+}

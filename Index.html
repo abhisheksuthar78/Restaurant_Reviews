@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Review</title>
+    <style>
+        body{margin: 0;padding: 0;}
+        .top{color:white;margin: 0;padding-top: 8%;padding-bottom: 8%;
+        text-align: center;font-size: xx-large;font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            background-image: url('https://cdn.pixabay.com/photo/2018/04/17/11/03/cocktail-3327242_1280.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        nav{margin:0%;padding:2%;display: flex;justify-content: space-between;}
+        .topbar a{
+            text-decoration:none;
+            padding-right: 3px;
+            padding-left: 3px;
+            font-size: x-large;
+            color: white;
+        }
+        .topbar a:hover{
+            color: red;
+        }
+        footer{
+            bottom:0%;
+            position:relative;
+            padding:5%;
+            background-image: url('https://cdn.pixabay.com/photo/2018/04/17/11/03/cocktail-3327242_1280.jpg');
+            background-position: center;
+            background-size:cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        .icon-square:hover{
+            transform: scale(1.5);
+            transition: .4s;
+        }
+        .reviews{
+            padding:5%;
+        }
+        .stars{
+            height: 20px;
+            width: 20px;
+        }
+        .review_stars{
+            display: inline-block;
+        }
+        .review_box{
+            height: 30%;
+            width: 30%;
+            border: 1px;
+            border-radius: 20px;
+            padding: 2%;
+            
+        }
+        #review_input:hover{
+            transform: scale(1.1);
+            transition: .4s;
+        }
+        #review_input1:hover{
+            transform: scale(1.1);
+            transition: .4s;
+        }
+        #review_input2:hover{
+            transform: scale(1.1);
+            transition: .4s;
+        }
+        #review_input3:hover{
+            transform: scale(1.1);
+            transition: .4s;
+        }
+        .review_box:hover{
+            transform: scale(1.1);
+            transition: .4s;
+        }
+        .add_review:hover{
+            transform: scale(1.1);
+            transition: .4s;
+            cursor: pointer;
+        }
+        .images_restaurant{
+            height: 40%;
+            width: 70%;
+        }
+        .images_restaurant:hover{
+            width:71%;
+        }
+        #written_reviews{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        .review{
+            padding: 2%;
+        }
+        .button{
+            padding: 5%;
+        }
+        .add_review{
+            width: 12%;
+            padding: 1.2%;
+            border-radius: 20px;
+            background-color: rgb(0, 106, 255);
+            color: white;
+            border:none;
+        }
+        #review_input img{
+            height: 20px;
+            width: 20px;
+        }
+        #review_input1 img{
+            height: 20px;
+            width: 20px;
+        }
+        #review_input2 img{
+            height: 20px;
+            width: 20px;
+        }
+        #review_input3 img{
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav id="nav_bar">
+            <div  class="topbar">
+                    <a href="about.html">About us</a>
+                    <a href="contact.html">Contacts</a>
+            </div>
+        </nav>
+        <div class="top">
+            <h1>Restaurant Reviews</h1>
+        </div>
+    </header>
+    <div id="content">
+        <h1 style="text-align: center;">Restaurants</h1>
+        <center><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12794.545689213362!2d77.61711080239286!3d13.044437812672449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sRestaurants%20near%20nagawara!5e0!3m2!1sen!2sin!4v1686375077850!5m2!1sen!2sin" width="90%" height="400" zoom:4></iframe></center>
+    </div>
+    <div class="reviews">
+        <img src="icons/restaurant_FILL0_wght400_GRAD0_opsz48.png" height="30px" width="30px">
+        <button style="border: none;background-color: white;" onclick="on_click()"><h2>Biryani Zone restaurant</h2></button>
+        
+        <h4 id="loc"></h4>
+        <center><div id="square"><img class="images_restaurant" src="Images/Biriyani Zone.png"></div></center>
+        <p style="padding-top: 40px; display: inline-flex; justify-content: start;">
+            <img style="height:20px;width: 20px;" src="icons/placeholder.png">
+            Next to Manyata Tech Park exit gate,Outer ring road Kasaba Hobali,<br>next to IBM building, Nagawara, Bengaluru, Karnataka 560045
+        </p>
+        <div>
+            <p class="review_stars">
+                4.2&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/Empty_star.png">
+            </p>
+        </div>
+        <h2>Reviews</h2>
+        <div id="written_reviews">
+            <div id="review_input">
+                
+            </div>
+            <div class="review_box">
+                <p class="review_stars">
+                    <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                    <img class="stars" src="icons/star.png">
+                    <img class="stars" src="icons/star.png">
+                    <img class="stars" src="icons/star.png">
+                    <img class="stars" src="icons/star.png">
+                    <img class="stars" src="icons/star.png">
+                </p>
+                <p class="review">No doubt they serve one of the best biryani. But the workers look little lost to me. I was on a strict veg diet, i wanted them to pack my veg biryani separately and non veg separately. I was travelling that day, I rechecked with them multiple time yet they kept telling that they have not mixed it and gave packed it properly</p>
+            </div>
+            <div class="review_box">
+                <p class="review_stars">
+                    <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                    <img class="stars" src="icons/star.png">
+                    <img class="stars" src="icons/star.png">
+                    <img class="stars" src="icons/star.png">
+                    <img class="stars" src="icons/Empty_star.png">
+                    <img class="stars" src="icons/Empty_star.png">
+                </p>
+                <p class="review">We went on a Sunday afternoon with family. The place gets pretty crowded at peak hours. The servers are very polite and will help you order according to your liking. I tried veg biryani and paneer sholay kabab. It was quite decent. I would suggest ordering Mint Lime Soda.</p>
+            </div>
+            <div class="review_box">
+                <p class="review_stars">
+                    <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                    <img class="stars" src="icons/star.png">
+                    <img class="stars" src="icons/Empty_star.png">
+                    <img class="stars" src="icons/Empty_star.png">
+                    <img class="stars" src="icons/Empty_star.png">
+                    <img class="stars" src="icons/Empty_star.png">
+                </p>
+                <p class="review">Horrible food. We ordered boneless biriyani and Afghan tikka. None of it was even close to average. They refused to provide mayo even after saying we would pay for it. A hotel doesn't even have mayonnaise? Terrible experience. Ambience was okay.</p>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <center><button class="add_review" style="text-align: center;" onclick="review1()">Write a review</button></center>
+    </div>
+</div>
+<div class="reviews">
+    <img src="icons/restaurant_FILL0_wght400_GRAD0_opsz48.png" height="30px" width="30px">
+    <button style="border: none;background-color: white;" onclick="on_click()"><h2>Aroma's Hyderabad House</h2></button>
+    
+    <h4 id="loc"></h4>
+    <center><div id="square"><img class="images_restaurant" src="https://lh3.googleusercontent.com/p/AF1QipOszBIf_Ogv7iTFyQzmT0odrE_r5eGP4ZZYak6N=s1360-w1360-h1020"></div></center>
+    <p style="padding-top: 40px; display: inline-flex; justify-content: start;">
+        <img style="height:20px;width: 20px;" src="icons/placeholder.png">
+        1, opposite MANYATA EMBASSY BUSINESS PARK, near Sky walk exit, Nagavara, Bengaluru, Karnataka 560045
+    </p>
+    <div>
+        <p class="review_stars">
+            4.1&ensp;
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/Empty_star.png">
+        </p>
+    </div>
+    <h2>Reviews</h2>
+    <div id="written_reviews">
+        <div id="review_input1">
+                
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+            </p>
+            <p class="review">It has got two. Wheelers parking area, a family restaurant, customer friendly people, food is very nice and tasty , both vegetarian and non-vegetarian food is available, if you need to order they also do that but you have to be in certain range.
+                A place where you would love to take your family or friends for a good meal and relaxing environment.</p>
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+            </p>
+            <p class="review">Crowd is increasing..and quality is getting down...the biryani I had today was the worst biryani I had in my entire life...this will be my last visit here</p>
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+            </p>
+            <p class="review">One of the worst restaurant in city, I ordered in swiggy biryani, they delivered only rice... Pls don't go to restaurant.</p>
+        </div>
+    </div>
+</div>
+<div class="button">
+    <center><button class="add_review" style="text-align: center;" onclick="review2()">Write a review</button></center>
+</div>
+</div>
+<div class="reviews">
+    <img src="icons/restaurant_FILL0_wght400_GRAD0_opsz48.png" height="30px" width="30px">
+    <button style="border: none;background-color: white;" onclick="on_click()"><h2>K2 Multi-Cuisine Family Restaurant</h2></button>
+    
+    <h4 id="loc"></h4>
+    <center><div id="square"><img class="images_restaurant" src="https://lh3.googleusercontent.com/p/AF1QipP31_1UGnz6He_kRBm5VUSop5AzD2zj9euYK-pp=s1360-w1360-h1020"></div></center>
+    <p style="padding-top: 40px; display: inline-flex; justify-content: start;">
+        <img style="height:20px;width: 20px;" src="icons/placeholder.png">
+        J.M.J.Philomina Hospital, near Manyata tech park, Bengaluru, Karnataka 560045
+    </p>
+    <div>
+        <p class="review_stars">
+            3.8&ensp;
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/Empty_star.png">
+        </p>
+    </div>
+    <h2>Reviews</h2>
+    <div id="written_reviews">
+        <div id="review_input2">
+                
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+            </p>
+            <p class="review">One of the best hotel I’ve ever been privileged enough to stay and it only gets more breathtaking when you walk in. High quality rooms and high quality service.</p>
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+            </p>
+            <p class="review">This restaurant is small but seems to be good at North Indian foods</p>
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+            </p>
+            <p class="review">Price high. Taste is not good.</p>
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+            </p>
+            <p class="review">Biriyani is good in here...but the stafs are unprofessional...and place also need renovation... seating arrangement is not good also name is changed</p>
+        </div>
+    </div>
+</div>
+<div class="button">
+    <center><button class="add_review" style="text-align: center;" onclick="review3()">Write a review</button></center>
+</div>
+</div>
+<div class="reviews">
+    <img src="icons/restaurant_FILL0_wght400_GRAD0_opsz48.png" height="30px" width="30px">
+    <button style="border: none;background-color: white;" onclick="on_click()"><h2>Orange Leaf Restaurant</h2></button>
+    
+    <h4 id="loc"></h4>
+    <center><div id="square"><img class="images_restaurant" src="https://lh3.googleusercontent.com/p/AF1QipOogn4PjMMokSNYQTTCRcFvVzg3dhAIiENw8cVN=s1360-w1360-h1020"></div></center>
+    <p style="padding-top: 40px; display: inline-flex; justify-content: start;">
+        <img style="height:20px;width: 20px;" src="icons/placeholder.png">
+        MS Ramaiah North City, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560045
+    </p>
+    <div>
+        <p class="review_stars">
+            3.9&ensp;
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/star.png">
+            <img class="stars" src="icons/Empty_star.png">
+        </p>
+    </div>
+    <h2>Reviews</h2>
+    <div id="written_reviews">
+        <div id="review_input3">
+                
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/rating.png">
+            </p>
+            <p class="review">The food here is really yummy. I tried Chicken Angora curry for the first time and it was really good. Along with it, drums of heaven was nice as well.
+                For ice cream, try honeymoon  special ice cream. You will like it.</p>
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+            </p>
+            <p class="review">Worst . What delay it is. Is this how you treat a customer? Bad service, don’t go there</p>
+        </div>
+        <div class="review_box">
+            <p class="review_stars">
+                <img style="height: 30px; width: 30px;" src="icons/pngwing.com.png">&ensp;
+                <img class="stars" src="icons/star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+                <img class="stars" src="icons/Empty_star.png">
+            </p>
+            <p class="review">The worst restaurant ever visited. Had gone to pickup the food parcel where I had asked for 4 rotis and they charged 5rs more. Such inaccurate billing. Straight away avoid this place.</p>
+        </div>
+    </div>
+    <div class="button">
+        <center><button class="add_review" style="text-align: center;" onclick="review4()">Write a review</button></center>
+    </div>
+</div>
+    <footer id="footer">
+        <div class="contact-content" style="display: inline-flexbox;">
+            <div class="icon" style="padding-right:5px;text-align: left;">
+                <a href="https://www.instagram.com/"><img style="height:30px; width:30px;border-radius:7px;padding-right:2px;" class="icon-square" src="Images/instagram.png"></a>
+                <a href="https://www.facebook.com/"><img style="height:30px; width:30px;border-radius:7px;padding-right:2px;" class="icon-square" src="Images/facebook.png"></a>
+                <a href="https://twitter.com/"><img style="height:30px; width:30px;border-radius:7px;padding-right:2px;" class="icon-square" src="Images/twitter.png"></a>
+                <a href="https://in.pinterest.com/#top"><img style="height:30px; width:30px;border-radius:7px;padding-right:2px;" class="icon-square" src="Images/pinterest.png"></a>
+            </div>
+            <div class="info" style="text-align: center;position: relative;font-size: larger;">
+                <p>email - restaurant_review@gmail.com,&ensp;reviewrestaurant@yahoo.com<br></p>
+                <p><br>&copy; 2023 Restaurant Review Website. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function on_click(){
+        var loc = document.getElementById("loc").innerHTML="location";
+        }
+        function review1(){
+            alert("Do you want to write a review");
+            var i = prompt("Write review");
+            var star = prompt("Enter rating");
+            if(star == '0')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/Empty_star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/Empty_star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '1')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/Empty_star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '2')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '3')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '4')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else
+            {   
+                var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/star.png";
+                var src = document.getElementById("review_input");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            var br = document.createElement("p").innerHTML = "<br>";
+            var element = document.createElement("p").innerHTML= i;
+            //var style = document.createElement("style");
+            //style.sheet.insertRule("#review_input{height: 30%;width: 30%;padding: 2%;}");
+            //var enter = document.getElementById("review_input").appendChild(style);
+            var enter = document.getElementById("review_input");
+            enter.style.height = "30%";
+            enter.style.width = "35%";
+            enter.style.padding = "2%";
+            enter.append(element);
+        }
+        function review2(){
+            alert("Do you want to write a review");
+            var i = prompt("Write review");
+            var star = prompt("Enter rating");
+            if(star == '0')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/Empty_star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/Empty_star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input1");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '1')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/Empty_star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input1");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '2')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input1");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '3')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input1");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '4')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input1");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else
+            {   
+                var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/star.png";
+                var src = document.getElementById("review_input1");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            var br = document.createElement("p").innerHTML = "<br>";
+            var element = document.createElement("p").innerHTML= i;
+            //var style = document.createElement("style");
+            //style.sheet.insertRule("#review_input{height: 30%;width: 30%;padding: 2%;}");
+            //var enter = document.getElementById("review_input").appendChild(style);
+            var enter = document.getElementById("review_input1");
+            enter.style.height = "30%";
+            enter.style.width = "35%";
+            enter.style.padding = "2%";
+            enter.append(element);
+        }
+        function review3(){
+            alert("Do you want to write a review");
+            var i = prompt("Write review");
+            var star = prompt("Enter rating");
+            if(star == '0')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/Empty_star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/Empty_star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input2");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '1')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/Empty_star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input2");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '2')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input2");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '3')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input2");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '4')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input2");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else
+            {   
+                var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/star.png";
+                var src = document.getElementById("review_input2");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            var br = document.createElement("p").innerHTML = "<br>";
+            var element = document.createElement("p").innerHTML= i;
+            //var style = document.createElement("style");
+            //style.sheet.insertRule("#review_input{height: 30%;width: 30%;padding: 2%;}");
+            //var enter = document.getElementById("review_input").appendChild(style);
+            var enter = document.getElementById("review_input2");
+            enter.style.height = "30%";
+            enter.style.width = "35%";
+            enter.style.padding = "2%";
+            enter.append(element);
+        }
+        function review4(){
+            alert("Do you want to write a review");
+            var i = prompt("Write review");
+            var star = prompt("Enter rating");
+            if(star == '0')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/Empty_star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/Empty_star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input3");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '1')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/Empty_star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input3");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '2')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/Empty_star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input3");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '3')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/Empty_star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input3");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else if(star == '4')
+            {   var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/Empty_star.png";
+                var src = document.getElementById("review_input3");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            else
+            {   
+                var acc = document.createElement("img");
+                acc.src = "icons/pngwing.com.png";
+                var img = document.createElement("img");
+                img.src = "icons/star.png";
+                var img1 = document.createElement("img");
+                img1.src = "icons/star.png";
+                var img2 = document.createElement("img");
+                img2.src = "icons/star.png";
+                var img3 = document.createElement("img");
+                img3.src = "icons/star.png";
+                var img4 = document.createElement("img");
+                img4.src = "icons/star.png";
+                var src = document.getElementById("review_input3");
+                src.appendChild(acc);
+                src.appendChild(img);
+                src.appendChild(img1);
+                src.appendChild(img2);
+                src.appendChild(img3);
+                src.appendChild(img4);
+            }
+            var br = document.createElement("p").innerHTML = "<br>";
+            var element = document.createElement("p").innerHTML= i;
+            //var style = document.createElement("style");
+            //style.sheet.insertRule("#review_input{height: 30%;width: 30%;padding: 2%;}");
+            //var enter = document.getElementById("review_input").appendChild(style);
+            var enter = document.getElementById("review_input3");
+            enter.style.height = "30%";
+            enter.style.width = "35%";
+            enter.style.padding = "2%";
+            enter.append(element);
+        }
+    </script>
+    <!--<script>
+        function initMap(){
+            var location = {lat:12.9716,lng:77.5946};
+            var map = new google.maps.Map(document.getElementById("map"),{
+                zoom:4,
+                center:location
+            });
+        }
+    </script>-->
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"></script>-->
+</body>
+</html>
